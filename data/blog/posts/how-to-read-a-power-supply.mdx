@@ -1,0 +1,150 @@
+---
+title: How to Read a Power Supply
+date: '2022-04-09T19:52:12'
+lastmod: '2022-04-09'
+tags: ['computer hardware', 'basics', 'guide']
+draft: false
+summary: A short guide on how to read the details of a power supply
+images: ['/static/images/readingPowerSupply/powerSupplyBanner.jpg']
+authors: ['default']
+layout: PostLayout
+canonicalUrl:
+---
+
+# Introduction
+
+The power supply is one of the most essential components in a computer (or any device). It powers everything from the CPU to the case fans and any device can't run without one.
+
+There is actually a quite a bit of things to know about in a power supply unit (abbreviated to `PSU`), but this post will only discuss the PSU's power ratings and how that works.
+
+Luckily, you don't have to be a electrical engineer or a physicist to understand how a PSU works!
+
+Disclaimer: This guide will only focus on power supplies designed for uses in PCs, but the main concepts will still apply.
+
+# What is a Power Supply Label?
+
+Generally when you look at a PSU, there will be something called a `Power Supply Label`.
+This label depicts the specifications at which the PSU will run at.
+
+An example of this typically looks something like this:
+
+<Image
+  alt="thermal_paste"
+  src="/static/images/readingPowerSupply/powerSupplyLabelEx.png"
+  width={1920}
+  height={1080}
+/>
+PSU labels will differ from brand to brand, but is generally is in this format.
+
+From this, we can see that there are four main sections to focus on:
+
+## AC Input
+
+Also know as `A`lternating `C`urrent Input, this is where the power supply takes in AC (presumably from a power outlet) and converts it into DC (direct current).
+
+It isn't really important to know the differences between the two, but a more relatable example would be boiling dirty water from a spring or a mountain into water drinkable for people [(More info here)](https://www.accuenergy.com/articles/ac-versus-dc-power/).
+
+In other words: AC (from power outlet) ---> DC (usable by PSU to power other things)
+
+In the picture above:
+
+- We can see that the the model name is `CMPSU-550TXM`. We'll want to focus on the `550` part as that signifies the wattage that this particular PSU is rated for.
+  - This means that it will not be able to provide more than 550 watts at most. This PSU wouldn't be enough if your PC needed more than 550 watts to run.
+- In the AC Input section, we can see a number of things.
+  - The `100 - 240V` (or the input voltage) means that this PSU is able to take voltages from 100V to 240V.
+  - `10A-5A` (or the input amps) is the range of amps given to the PSU, usually supplied by the power outlet (AC, in other words).
+  - `50Hz - 60Hz` (or the hertz) is the frequency of the AC that is accepted by the PSU.
+
+## DC Output
+
+Short for `D`irect `C`urrent Output, this is where the power supply takes the DC, which was converted from AC, and distributes it to the entire computer.
+
+Again, if you want to learn more, click [here](https://en.wikipedia.org/wiki/Direct_current).
+
+In PSUs, there are things called [rails](https://askinglot.com/how-many-12v-rails-does-the-power-supply-have), which essentially, are wires that carries electrical currents that distributes electricity from the PSU to other components.
+
+The voltages of said rails are a little complicated, so here's a [link](https://itigic.com/power-supply-rails-12v-5v-and-3-3v-explained/) that explains it all.
+
+## Max Load
+
+The maximum load of a PSU (in [Amps](https://en.wikipedia.org/wiki/Ampere)) that can be handled. There are different numbers for different brands of power supplies.
+
+## Maximum Combined Wattage
+
+Simply, you can calculate the amount of wattage availiable for each rail with this formula (also shown in the section below):
+
+```
+Watts = Amps * Volts
+```
+
+Example:
+12V rail --> (45A) \* (12V) = ~540 Watts
+
+In the picture above, we have `140W` for the 3.3V and 5V rail, `540W` for the 12V rail, `9.6W` for the -12V rail, and `15W` for the +5Vsb rail.
+
+# What is a Power Rating?
+
+For PSUs, there is a system that rates PSUs based on their efficiency and reliability. The system goes as follows from least efficient/reliable to most:
+
+- `80+` or `80+ White`
+- `80+ Bronze`
+- `80+ Silver`
+- `80+ Gold`
+- `80+ Platinum`
+- `80+ Titanium`
+
+Named after various precious metals, these ratings represent how efficient and reliable (on providing the wattage advertised by the manufacturer)
+
+[Better Table Here](https://www.velocitymicro.com/blog/what-is-psu-efficiency-and-why-is-it-important/)
+
+According to [Wikipedia](https://en.wikipedia.org/wiki/80_Plus), The `80+` on PSUs means that they,
+
+> ...have more than 80% energy efficiency at 20%, 50%, and 100% of rated load, and a power factor of 0.9 or greater at 100% load.
+
+For example, our 550W PSU, which happens to be Gold-certified, would have:
+
+```js
+- efficiency = 87% (or 0.87) for 100% load
+- output power = 550W
+- input power = ?
+- efficiency = output power / input power
+
+(0.87) = (550W) / input power
+
+Solving for input power:
+
+input power = 550W / 0.87
+            = ~632W
+
+Finding how much energy lost as heat:
+
+input power - output power = energy lost
+
+(632W) - (550W) = 82W lost as heat
+```
+
+From this calculation, we can see that at full load,
+the PSU actually needs 632 watts from the power outlet to output 550W at full load, with 82 watts being lost as heat.
+
+[80 plus chart](https://en.wikipedia.org/wiki/80_Plus)
+
+# Conclusion
+
+In essence, the labeling (and rating) on the PSU is relatively accurate for the average userbase. However it is still important to at least recognize the tolerances of PSUs.
+
+Surprisingly enough, this took me a little while to write up. There really isn't much of a guide on how the labeling on the PSU works, so I had to scrounge around forums and other websites for reliable information.
+Going into this, I didn't know much about the inner workings of PSUs but it ended up being a pretty valuable experience.
+
+# Sources / More Resources
+
+- https://www.apartmenttherapy.com/deciphering-the-power-label-on-your-ac-adapters-168405
+- https://www.wepc.com/tips/power-supply-ratings-exactly-what-do-they-mean/
+- https://forums.tomshardware.com/threads/how-to-read-power-supply-specs.1559166/
+- https://www.hostdime.com/blog/wp-content/uploads/2019/10/Screen-Shot-2020-05-01-at-8.46.13-AM-1024x771.png
+- https://planetechusa.com/the-quick-guide-to-understanding-external-psu-labels/
+- https://www.accuenergy.com/articles/ac-versus-dc-power/
+- https://en.wikipedia.org/wiki/Mains_electricity_by_country
+- https://askinglot.com/how-many-12v-rails-does-the-power-supply-have
+- https://itigic.com/power-supply-rails-12v-5v-and-3-3v-explained/
+- https://en.wikipedia.org/wiki/80_Plus
+- https://www.velocitymicro.com/blog/what-is-psu-efficiency-and-why-is-it-important/

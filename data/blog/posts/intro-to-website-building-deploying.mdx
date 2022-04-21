@@ -1,0 +1,152 @@
+---
+title: Introduction to Website Building/Deploying
+date: '2022-03-14'
+lastmod: '2022-03-14'
+tags: ['computer hardware', 'basics', 'guide']
+draft: false
+summary: This post will talk about the basics of foundations of building a website and deploying said website.
+images: ['/static/images/websiteBuildingandDeploying/websiteBanner.jpg']
+authors: ['default']
+layout: PostLayout
+canonicalUrl: https://chcblog.vercel.app/blog/posts/intro-to-website-building-deploying
+---
+
+# Introduction
+
+Adapted from [here](https://docs.google.com/presentation/d/1XHicpsC3UhjVRfJ_dZ9KKekVXbULy0VRg9i3dkNABgY/edit?usp=sharing).
+
+Making a website can be daunting but it doesn't have to be! By the end of this guide, you'll learn how to build your own website.
+
+NOTE: This guide won't go into the step-by-step on how to build websites, but rather give a overview of the components and other stuff relating to them.
+
+TL;DR: Go to the `General Resources` section and click on any (or all) the links.
+
+## Components
+
+The foundation of building a website comes from these three main components:
+
+### HTML
+
+HTML stands for `H`yper`T`ext `M`arkup `L`anguage and it is the foundation of the majority of websites (and the World Wide Web).
+While it isn't technically a programming language, it is important to learn it and know how it works if you want to build a website.
+
+The way that HTML works is by using these symbols, `<>` , called tags. These tags can do various things inside of them.
+Some of these include:
+
+- `<p>`, which puts anything between the starting tag and a ending tag as part of a paragraph.
+- `<body>`, which denotes the content that is inside the tag as the main content of the website.
+  and
+- `<div>`, which denotes a division and is used for dividing up content into divisions, essentially dividing up the main content into smaller ones.
+
+More information and examples can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML).
+
+### CSS
+
+CSS stands for `C`ascading `S`tyle`S`heets and is used to customize the way that a website is presented to the user. In other words, it is what stylizes and makes websites good-looking.
+
+To avoid making this long, this [link](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax) will explain CSS (and its syntax) better than I could.
+Some of the more popular [CSS frameworks](https://en.wikipedia.org/wiki/CSS_framework) include:
+
+- [Bootstrap](https://getbootstrap.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Bulma](https://bulma.io/)
+- [MaterialUI](https://mui.com/) (for [React](https://reactjs.org/))
+- [More CSS frameworks listed here](https://athemes.com/collections/best-css-frameworks/)
+
+### JS
+
+JS (or short for `J`ava`S`cript) is a [scripting language](https://www.indeed.com/career-advice/career-development/what-is-scripting-language) that is usually paired with HTMl and CSS to create fully-functional websites.
+
+Not to be confused with [Java](https://java.com/en/download/help/java_javascript.html), JS is almost always used in creating websites due to its nature of being versatile (can work with nearly anything) and lightweight (low storage capacity).
+Some popular [JS frameworks](https://www.tutorialspoint.com/what-is-a-javascript-framework) include:
+
+- [React](https://reactjs.org/)
+- [AngularJS](https://angularjs.org/)
+- [Vue.js](https://vuejs.org/)
+- [Node.js](https://nodejs.org/en/)
+- [More JS frameworks here](https://hackr.io/blog/best-javascript-frameworks)
+
+# Goals of a website
+
+While everyone have different standards and goals of websites, here are three main goals people generally strive for:
+
+1. Readable and full functionality (optimally)
+1. Web responsive (meaning it can be viewed the same way on a phone, tablet, laptop, PC, etc.)
+1. Just making it work (at least as a [MVP](https://www.techopedia.com/definition/27809/minimum-viable-product-mvp))
+
+## Example of a website
+
+A boilerplate website would look something like this:
+
+```HTML
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>repl.it</title>
+   <link href="index.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
+   <p>Here's some regular html, p5 canvas gets appended to the end</p>
+   <p>Move the mouse to randomize the colors!</p>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+   <script src="index.js"></script>
+ </body>
+</html>
+
+```
+
+If you paste it in some text editor, it would look something like this!
+
+<Image
+  alt="picture describing a website that has some text on it"
+  src="/static/images/websiteBuildingandDeploying/exampleWebsiteContent.jpg"
+  width={1143}
+  height={291}
+/>
+
+## Things to Note
+
+- Can put everything into a HTML file, but not in a CSS file or a JS file(usually).
+- Everyone has their own style of doing things.
+- How things are displayed (at first) depends on your resolution (mainly) and monitor size.
+
+# Free Deployment
+
+Deploying a website can be a headache and a drain on the wallet, but here are some free website hosting to alleviate some of the pain:
+
+- [Github Pages](https://pages.github.com/)
+- [Repl.it](https://replit.com/)
+- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/)
+
+Each have their own methods of doing things and may range from easy to hard.
+
+## Paid Alternatives
+
+If you prefer to skip deploying your website by yourself altogether, there are realistically two options:
+
+- Website builders (Wix, Wordpress, Squarespace, etc.)
+- Paying someone else to do it for you
+
+# Epilogue
+
+You've reached the end of the guide! Hopefully, you were able to learn a thing or two (I know I did) about the foundation of website building (and deploying).
+
+If there is a mistake in the post or something that needs updating, feel free to leave a comment below or let me know.
+
+# General Resources
+
+For general help:
+
+- https://html.com/ (has a decent tutorial on your first HTML webpage)
+- https://developer.mozilla.org/en-US/docs/Web (essentially the go-to doc for any web dev)
+- https://www.browserstack.com/responsive (for testing website responsiveness on any device)
+- https://eloquentjavascript.net/ (An in-depth e-textbook about JS and programming with it)
+
+For testing out things:
+(both roughly function the same.)
+
+- https://jsfiddle.net/
+- https://playcode.io/
