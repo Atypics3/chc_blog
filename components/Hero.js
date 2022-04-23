@@ -19,7 +19,7 @@ export default function HeroSection() {
           <div className="mt-6">
             <Link
               href={`/about`}
-              className="rounded-full bg-blue-100 px-3 text-xl font-medium text-blue-200 hover:bg-blue-200 hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:text-blue-100 dark:hover:bg-blue-600 dark:hover:text-white dark:focus:ring-blue-500"
+              className="rounded-full bg-blue-400 px-4 text-xl font-medium text-dark hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:bg-blue-700 dark:text-blue-100 dark:hover:bg-blue-600 dark:hover:text-white dark:focus:ring-blue-500"
             >
               Read More
             </Link>

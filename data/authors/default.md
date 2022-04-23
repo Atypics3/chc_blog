@@ -1,6 +1,6 @@
 ---
 name: Edwin Huang
-avatar: /static/images/profile.jpg
+avatar: /static/images/profile.png
 occupation: CS Student
 # company: N/A
 email: edwinhuang@outlook.com

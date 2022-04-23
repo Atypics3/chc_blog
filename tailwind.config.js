@@ -41,7 +41,7 @@ module.exports = {
               textDecoration: 'none',
               borderBottom: '2px solid blue',
               '&:hover': {
-                color: `yellow !important`,
+                color: `blue !important`,
               },
               code: { color: theme('colors.primary.400') },
             },

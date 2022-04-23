@@ -1,15 +1,29 @@
 const resourcesData = [
   {
-    title: 'Placeholder',
+    title: 'PCPartPicker',
     description: `coming soon!`,
     imgSrc: '/static/images/',
-    href: 'blog/posts/placeholder',
+    href: 'https://pcpartpicker.com/',
   },
   {
-    title: 'placeholder 2',
+    title: 'r/buildapcsales',
     description: `coming soon!`,
     imgSrc: '/static/images/',
-    href: 'blog/posts/placeholder2',
+    href: 'https://www.reddit.com/r/buildapcsales/',
+  },
+
+  {
+    title: 'placeholder',
+    description: `coming soon!`,
+    imgSrc: '/static/images/',
+    href: '/',
+  },
+
+  {
+    title: 'placeholder',
+    description: `coming soon!`,
+    imgSrc: '/static/images/',
+    href: '',
   },
 ]
 
