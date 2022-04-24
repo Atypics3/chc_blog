@@ -12,6 +12,7 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col justify-between h-screen">
         <header className="flex items-center justify-between py-10">
           <div>
+            {/* title section */}
             <Link href="/">
               <div className="flex items-center justify-between">
                 {typeof siteMetadata.headerTitle === 'string' ? (
@@ -24,19 +25,25 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
+
           <div className="flex items-center text-base leading-5">
+            {/* links section */}
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100 hover:text-green-500 dark:hover:text-green-500"
                 >
                   {link.title}
                 </Link>
               ))}
             </div>
+
+            {/* theme switch section */}
             <ThemeSwitch />
+
+            {/* mobile nav section */}
             <MobileNav />
           </div>
         </header>

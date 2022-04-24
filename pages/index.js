@@ -75,7 +75,7 @@ export default function Home({ posts }) {
                               */}
                               {images ? (
                                 <Image
-                                  className="rounded object-cover"
+                                  className="rounded object-cover hover:scale-110 transition duration-300 ease-in-out transform-gpu"
                                   src={`/_next/image?url=${images}&w=1920&q=20`}
                                   srcSet=""
                                   slug="slug"

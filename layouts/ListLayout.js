@@ -65,7 +65,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
                       {images ? (
                         <Image
-                          className="rounded object-cover"
+                          className="rounded object-cover hover:scale-110 transition duration-300 ease-in-out transform-gpu"
                           src={`/_next/image?url=${images}&w=640&q=20`}
                           slug="slug"
                           title={`${title}`}
