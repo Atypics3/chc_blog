@@ -18,4 +18,4 @@ Speaking of which, more of what/why this blog exists is in this [post](https://c
 
 When not experimenting with stuff on the web or with hardware, you can find me playing a variety of games and doing other stuff.
 
-If you want to reach me, you can find me on [Github](https://github.com/Atypics3) and [Discord](https://www.discord.gg/KBEVUrZmW8). All my other contacts + my email address are also listed here.
+If you want to reach me, you can find me on [Github](https://github.com/Atypics3) and [Discord](https://www.discord.gg/KBEVUrZmW8). All my other contacts + my email address are also listed to the side.

@@ -4,7 +4,7 @@ date: '2022-04-09T19:52:12'
 lastmod: '2022-04-09'
 tags: ['computer hardware', 'basics', 'guide']
 draft: false
-summary: A short guide on how to read the details of a power supply
+summary: A short guide on how to read the details of a power supply.
 images: ['/static/images/readingPowerSupply/powerSupplyBanner.jpg']
 authors: ['default']
 layout: PostLayout
@@ -73,12 +73,16 @@ The maximum load of a PSU (in [Amps](https://en.wikipedia.org/wiki/Ampere)) that
 
 Simply, you can calculate the amount of wattage availiable for each rail with this formula (also shown in the section below):
 
-```
+```js
 Watts = Amps * Volts
 ```
 
-Example:
-12V rail --> (45A) \* (12V) = ~540 Watts
+Example to calculate the wattage for a 12-volt rail:
+
+```js
+12V rail = (45A) / (12V)
+         = ~540 Watts
+```
 
 In the picture above, we have `140W` for the 3.3V and 5V rail, `540W` for the 12V rail, `9.6W` for the -12V rail, and `15W` for the +5Vsb rail.
 

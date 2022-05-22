@@ -12,6 +12,6 @@ Links:
 
 - [Discord](https://discord.gg/KBEVUrZmW8)
 
-  - Maintained by [me](https://github.com/Atypics3/)
+  - Developed and maintained by [me](https://github.com/Atypics3/)
 
-  - Forked from [here](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+  - Forked from [Timlrx's NextJS Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)

@@ -8,7 +8,7 @@ import Image from 'next/image'
 // import NewsletterForm from '@/components/NewsletterForm'
 import HeroSection from '@/components/Hero'
 
-const MAX_DISPLAY = 3
+const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -49,7 +49,7 @@ export default function Home({ posts }) {
                             </dl>
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
+                              className="text-gray-900 dark:text-gray-100 hover:text-blue-400 dark:hover:text-blue-400"
                             >
                               {title}
                             </Link>
@@ -64,19 +64,17 @@ export default function Home({ posts }) {
                             style={{
                               position: 'relative',
                               paddingTop: '5%',
+                              display: 'block',
                             }}
                           >
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
-                              {/* thumbnails 
-                                credit: https://github.com/aloisdg/tambouille
-                              */}
                               {images ? (
                                 <Image
                                   className="rounded object-cover hover:scale-110 transition duration-300 ease-in-out transform-gpu"
-                                  src={`/_next/image?url=${images}&w=1920&q=20`}
+                                  src={`/_next/image?url=${images}&w=1920&q=75`}
                                   srcSet=""
                                   slug="slug"
                                   title={`${title}`}

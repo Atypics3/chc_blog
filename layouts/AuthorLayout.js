@@ -43,7 +43,6 @@ export default function AuthorLayout({ children, frontMatter }) {
               <SocialIcon kind="github" href={github} />
               {/* <SocialIcon kind="linkedin" href={linkedin} /> */}
               {/* <SocialIcon kind="twitter" href={twitter} /> */}
-              {/* probably will put a widget here at some point */}
               <SocialIcon kind="discord" href={discord} />
               <SocialIcon kind="spotify" href={spotify} />
             </div>
