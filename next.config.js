@@ -36,7 +36,6 @@ module.exports = withBundleAnalyzer({
         'react-dom': 'preact/compat',
       })
     }
-
     return config
   },
 })

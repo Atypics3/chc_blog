@@ -75,6 +75,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                           blurDataURL={`/_next/image?url=${images}&w=16&q=1`}
                           width={800}
                           height={600}
+                          sizes="50vw"
+                          loading="lazy"
                         />
                       ) : null}
                     </Link>
