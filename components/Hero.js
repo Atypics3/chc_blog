@@ -34,7 +34,7 @@ export default function HeroSection() {
           className="rounded-full w-48 h-48"
           width={250}
           height={250}
-          loading="lazy"
+          priority
         />
       </div>
     </div>

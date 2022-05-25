@@ -7,7 +7,6 @@ import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 // import NewsletterForm from '@/components/NewsletterForm'
 import HeroSection from '@/components/Hero'
-import src from '@tailwindcss/typography'
 
 const MAX_DISPLAY = 5
 
@@ -75,7 +74,7 @@ export default function Home({ posts }) {
                               {images ? (
                                 <Image
                                   className="rounded object-cover w-full xl:w-auto hover:scale-110 transition duration-300 ease-in-out transform-gpu"
-                                  src={`/_next/image?url=${images}&w=1920&q=50`}
+                                  src={`/_next/image?url=${images}&w=3840&q=50`}
                                   slug="slug"
                                   title={`${title}`}
                                   alt={`${title}`}
@@ -84,8 +83,8 @@ export default function Home({ posts }) {
                                   blurDataURL={`/_next/image?url=${images}&w=16&q=1`}
                                   width={1920}
                                   height={1080}
-                                  sizes="50vw"
-                                  priority
+                                  sizes="320 640 750"
+                                  loading="lazy"
                                 />
                               ) : null}
                             </Link>
