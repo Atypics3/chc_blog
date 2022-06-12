@@ -15,3 +15,5 @@ Links:
   - Developed and maintained by [me](https://github.com/Atypics3/)
 
   - Forked from [Timlrx's NextJS Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+ 
+ Archived since 6/11/2022.
